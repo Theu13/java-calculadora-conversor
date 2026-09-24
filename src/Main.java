@@ -74,7 +74,14 @@ void calculadora() {
                 double num1 = reader.nextDouble();
                 System.out.println("Digite o primeiro segundo:");
                 double num2 = reader.nextDouble();
-                System.out.printf("A divisão é %.2f\n", (num1 / num2));
+                //System.out.printf("A divisão é %.2f\n", (num1 / num2));
+
+                //tratamento de divisão por 0
+                if (num2 == 0) {
+                    System.out.println("Erro: não é possível dividir por zero.");
+                } else {
+                    System.out.printf("A divisão é %.2f%n", num1 / num2);
+                }
             }
             case 5 -> {
                 System.out.println("Digite o primeiro número:");
@@ -88,7 +95,15 @@ void calculadora() {
                 double num1 = reader.nextDouble();
                 System.out.println("Digite o primeiro segundo:");
                 double num2 = reader.nextDouble();
-                System.out.printf("O resto para a divisão é %.2f\n", (num1 % num2));
+
+                //tratamento se num2 for igual a 0.
+                while (num2 == 0) {
+                    System.out.println("O divisor não pode ser zero.");
+                    System.out.println("Digite o segundo número: ");
+                    num2 = reader.nextDouble();
+                }
+
+                System.out.printf("Resultado do resto da divisão é: %.2f\n", (num1 % num2));
             }
             case 0 -> executarCalculadora = false;
             default -> System.out.println("Opção inválida.");
@@ -109,7 +124,7 @@ void calculadoraOpcoes(){
     System.out.println("3: Multiplicar.");
     System.out.println("4: Dividir.");
     System.out.println("5: Potencia.");
-    System.out.println("5: Resto.");
+    System.out.println("6: Resto.");
     System.out.println("0: Voltar ao Menu.");
 
 }
