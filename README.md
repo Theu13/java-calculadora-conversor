@@ -61,9 +61,12 @@ O valor em Fahrenheit é: 212,00
 ## O que pratiquei
 
 - Menus em loop com `while` e `switch`
+- Formatação de saída com `printf`
+
+## O que deve-se melhorar para versões futuras
+
 - Leitura de entrada com `Scanner` e validação com `hasNextInt()` / `hasNextDouble()`
 - Organização do código em métodos com uma responsabilidade cada
-- Formatação de saída com `printf`
 
 ## Autor
 
